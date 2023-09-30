@@ -33,12 +33,12 @@ const MapChart = ({ data }: { data: MapChartData[] }) => {
 
   const handleZoomIn = () => {
     if (position.zoom >= 8) return;
-    setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
+    setPosition((pos) => ({ ...pos, zoom: pos.zoom + 1 }));
   }
 
   const handleZoomOut = () => {
     if (position.zoom <= 1) return;
-    setPosition((pos) => ({ ...pos, zoom: pos.zoom / 2 }));
+    setPosition((pos) => ({ ...pos, zoom: pos.zoom - 1 }));
   }
 
   const handleMoveEnd = (position) => {
@@ -98,16 +98,17 @@ const MapChart = ({ data }: { data: MapChartData[] }) => {
       </ComposableMap>
       <ReactTooltip effect="float">{content}</ReactTooltip>
 
-      <div className="controls text-center">
-        <button type="button" className="p-2 m-5 bg-slate-200 dark:bg-slate-800 rounded-full" onClick={handleZoomIn}>
-          <PlusIcon />
+      <div className="controls text-center text-sm">
+        Zoom In/Out: 
+        <button type="button" className="p-2 m-3 bg-slate-200 dark:bg-slate-800 rounded-full" onClick={handleZoomOut}>
+          <MinusIcon className="w-3 h-3" />
         </button>
-        -
-        <button type="button" className="p-2 m-5 bg-slate-200 dark:bg-slate-800  rounded-full" onClick={handleZoomOut}>
-          <MinusIcon />
+        {position.zoom.toFixed(2)}
+        <button type="button" className="p-2 m-3 bg-slate-200 dark:bg-slate-800 rounded-full" onClick={handleZoomIn}>
+          <PlusIcon className="w-3 h-3" />
         </button>
-        <button type="button" className="p-2 m-5 bg-slate-200 dark:bg-slate-800  rounded-full" onClick={handleReset}>
-          <ReloadIcon />
+        <button type="button" className="p-2 m-5 bg-slate-200 dark:bg-slate-800 rounded-full" onClick={handleReset}>
+          <ReloadIcon className="w-3 h-3" />
         </button>
       </div>
     </div>
