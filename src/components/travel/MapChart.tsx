@@ -1,6 +1,5 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useState } from "react";
 import ReactTooltip from 'react-tooltip'
-import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import {
   ComposableMap,
@@ -10,6 +9,7 @@ import {
   // Graticule,
   ZoomableGroup
 } from "react-simple-maps";
+import data from '~/data/travel.json';
 import { PlusIcon, MinusIcon, ReloadIcon } from '@radix-ui/react-icons';
 
 const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
@@ -19,15 +19,8 @@ const colorScale = scaleLinear().domain([1, 10]).range(["#D8E2F6", "#1E40AF"]);
 const initialPosition = { coordinates: [0, 0], zoom: 1 };
 
 const MapChart = () => {
-  const [data, setData] = useState([]);
   const [content, setContent] = useState("");
   const [position, setPosition] = useState(initialPosition);
-
-  useEffect(() => {
-    csv(`travel.csv`).then((data) => {
-      setData(data);
-    });
-  }, []);
 
   const handleZoomIn = () => {
     if (position.zoom >= 4) return;
