@@ -23,7 +23,7 @@ const MapChart = () => {
   const [position, setPosition] = useState(initialPosition);
 
   const handleZoomIn = () => {
-    if (position.zoom >= 4) return;
+    if (position.zoom >= 8) return;
     setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
   }
 
