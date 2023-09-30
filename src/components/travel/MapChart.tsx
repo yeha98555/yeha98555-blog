@@ -28,10 +28,10 @@ const MapChart = () => {
     <div className="m-auto w-full h-full">
       <ComposableMap
         data-tip=""
-      projectionConfig={{
-        // rotate: [-150, 0, 0],
-        scale: 180
-      }}
+        projectionConfig={{
+          rotate: [-20, 0, 0],
+          scale: 190
+        }}
       >
         {/* <Sphere stroke="#E4E5E6" strokeWidth={0.5} /> */}
         {/* <Graticule stroke="#E4E5E6" strokeWidth={0.5} /> */}
@@ -62,6 +62,7 @@ const MapChart = () => {
                 );
               })
             }
+            
           </Geographies>
         )}
       </ComposableMap>
