@@ -5,7 +5,12 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
   }
 }

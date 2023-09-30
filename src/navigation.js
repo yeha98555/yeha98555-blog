@@ -1,10 +1,14 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getTravelPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Article',
       href: getBlogPermalink(),
+    },
+    {
+      text: 'Travel',
+      href: getTravelPermalink(),
     },
   ],
   actions: [{ text: 'Porfolio', href: getPermalink('/personal') }],

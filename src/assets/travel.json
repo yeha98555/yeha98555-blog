@@ -1,0 +1,82 @@
+[
+  {
+    "ISO3": "TWN",
+    "Name": "Taiwan",
+    "days": 10
+  },
+  {
+    "ISO3": "SA",
+    "Name": "United States",
+    "days": 5
+  },
+  {
+    "ISO3": "CHN",
+    "Name": "China",
+    "days": 8
+  },
+  {
+    "ISO3": "ESP",
+    "Name": "Spain",
+    "days": 8
+  },
+  {
+    "ISO3": "AD",
+    "Name": "Andorra",
+    "days": 1
+  },
+  {
+    "ISO3": "NLD",
+    "Name": "Netherlands",
+    "days": 5
+  },
+  {
+    "ISO3": "CZE",
+    "Name": "Czechia",
+    "days": 1
+  },
+  {
+    "ISO3": "AUS",
+    "Name": "Australia",
+    "days": 1
+  },
+  {
+    "ISO3": "DEU",
+    "Name": "Germany",
+    "days": 1
+  },
+  {
+    "ISO3": "HUN",
+    "Name": "Hungary",
+    "days": 1
+  },
+  {
+    "ISO3": "SVK",
+    "Name": "Slovakia",
+    "days": 1
+  },
+  {
+    "ISO3": "HRV",
+    "Name": "Croatia",
+    "days": 2
+  },
+  {
+    "ISO3": "ITA",
+    "Name": "Italy",
+    "days": 2
+  },
+  {
+    "ISO3": "VAT",
+    "Name": "Holy See",
+    "days": 1
+  },
+  {
+    "ISO3": "THA",
+    "Name": "Thailand",
+    "days": 3
+  },
+  {
+    "ISO3": "MYS",
+    "Name": "Malaysia",
+    "days": 1
+  }
+]
