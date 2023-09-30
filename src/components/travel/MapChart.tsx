@@ -15,7 +15,7 @@ const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/wo
 
 const colorScale = scaleLinear().domain([1, 10]).range(["#D8E2F6", "#1E40AF"]);
 
-const initialPosition = { coordinates: [0, 0], zoom: 1 };
+const initialPosition = { coordinates: [20, 0], zoom: 1 };
 
 interface MapChartData {
   ISO3: string;
