@@ -19,6 +19,7 @@
     "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^1.0.0-beta.4",
     "@fontsource-variable/inter": "^5.0.8",
+    "@radix-ui/react-icons": "^1.3.0",
     "astro": "^3.1.2",
     "astro-icon": "^1.0.0-next.2",
     "d3-fetch": "^3.0.1",
