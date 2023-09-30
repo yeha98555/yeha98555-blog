@@ -29,7 +29,7 @@ const MapChart = () => {
       <ComposableMap
         data-tip=""
         projectionConfig={{
-          // rotate: [-150, 0, 0],
+          rotate: [-20, 0, 0],
           scale: 180
         }}
       >
