@@ -9,7 +9,6 @@ import {
   // Graticule,
   ZoomableGroup
 } from "react-simple-maps";
-import data from '~/data/travel.json';
 import { PlusIcon, MinusIcon, ReloadIcon } from '@radix-ui/react-icons';
 
 const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
@@ -18,7 +17,12 @@ const colorScale = scaleLinear().domain([1, 10]).range(["#D8E2F6", "#1E40AF"]);
 
 const initialPosition = { coordinates: [0, 0], zoom: 1 };
 
-const MapChart = () => {
+interface MapChartData {
+  ISO3: string;
+  days: number;
+};
+
+const MapChart = ({ data }: { data: MapChartData[] }) => {
   const [content, setContent] = useState("");
   const [position, setPosition] = useState(initialPosition);
 

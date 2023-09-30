@@ -4,6 +4,8 @@ import Layout from '~/layouts/PageLayout.astro';
 import MapChart from '~/components/travel/MapChart';
 import Headline from '~/components/blog/Headline.astro';
 
+import travelData from '~/assets/travel.json';
+
 const metadata = {
   title: "Travel Record",
 }
@@ -15,6 +17,6 @@ const metadata = {
       The Travel
     </Headline>
 
-    <MapChart client:only="react" />
+    <MapChart client:only="react" data={travelData} />
   </section>
 </Layout>
