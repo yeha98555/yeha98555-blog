@@ -1,4 +1,5 @@
 import React, { memo, useEffect, useState } from "react";
+import ReactTooltip from 'react-tooltip'
 import { csv } from "d3-fetch";
 import { scaleLinear } from "d3-scale";
 import {
@@ -26,6 +27,7 @@ const MapChart = () => {
   return (
     <div className="m-auto w-full h-full">
       <ComposableMap
+        data-tip=""
         projectionConfig={{
           // rotate: [-150, 0, 0],
           scale: 180
@@ -63,6 +65,7 @@ const MapChart = () => {
           </Geographies>
         )}
       </ComposableMap>
+      <ReactTooltip effect="float">{content}</ReactTooltip>
     </div>
   );
 };
