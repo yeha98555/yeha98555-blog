@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getAsset, getTravelPermalink } from './utils/permalinks';
 import { findCategories } from './utils/blog';
 
 const categories = await findCategories();
@@ -17,6 +17,9 @@ export const headerData = {
           href: getPermalink(name, 'category'),
         };
       }),
+    },{
+      text: 'Travel',
+      href: getTravelPermalink(),
     },
   ],
   actions: [{ text: 'Porfolio', href: getPermalink('/personal') }],
