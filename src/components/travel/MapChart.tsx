@@ -7,7 +7,7 @@ import {
   Geography,
   // Sphere,
   // Graticule,
-  ZoomableGroup
+  ZoomableGroup,
 } from "react-simple-maps";
 import { PlusIcon, MinusIcon, ReloadIcon } from '@radix-ui/react-icons';
 
@@ -15,7 +15,12 @@ const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/wo
 
 const colorScale = scaleLinear().domain([1, 10]).range(["#D8E2F6", "#1E40AF"]);
 
-const initialPosition = { coordinates: [20, 0], zoom: 1 };
+const initialPosition = { coordinates: [20, 0] as [number, number], zoom: 1 };
+
+interface Position {
+  coordinates: [number, number];
+  zoom: number;
+};
 
 interface MapChartData {
   ISO3: string;
@@ -23,8 +28,8 @@ interface MapChartData {
 };
 
 const MapChart = ({ data }: { data: MapChartData[] }) => {
-  const [content, setContent] = useState("");
-  const [position, setPosition] = useState(initialPosition);
+  const [content, setContent] = useState<string>("");
+  const [position, setPosition] = useState<Position>(initialPosition);
 
   const handleZoomIn = () => {
     if (position.zoom >= 8) return;
@@ -69,7 +74,7 @@ const MapChart = ({ data }: { data: MapChartData[] }) => {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill={d ? colorScale(d["days"]) : "#DDDDDD"}
+                    fill={d ? colorScale(d.days) : "#DDDDDD"}
                     onMouseEnter={() => {
                       const NAME = geo.properties.name;
                       setContent(`${NAME}`);
