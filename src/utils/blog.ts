@@ -224,3 +224,27 @@ export const getStaticPathsBlogTag = async ({ paginate }) => {
     )
   );
 };
+
+/** */
+export const findTags = async (): Promise<Array<string>> => {
+  const posts = await fetchPosts();
+  const tags = posts.reduce((acc, post: Post) => {
+    if (post.tags && Array.isArray(post.tags)) {
+      return [...acc, ...post.tags];
+    }
+    return acc;
+  }, []);
+  return [...new Set(tags)];
+};
+
+/** */
+export const findCategories = async (): Promise<Array<string>> => {
+  const posts = await fetchPosts();
+  const categories = posts.reduce((acc, post: Post) => {
+    if (post.category) {
+      return [...acc, post.category];
+    }
+    return acc;
+  }, []);
+  return [...new Set(categories)];
+};
