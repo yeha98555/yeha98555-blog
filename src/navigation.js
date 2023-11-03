@@ -1,10 +1,22 @@
 import { getPermalink, getBlogPermalink, getTravelPermalink, getAsset } from './utils/permalinks';
+import { findCategories } from '~/utils/blog';
+
+export const prerender = false;
+
+const allCategories = await findCategories();
 
 export const headerData = {
   links: [
     {
       text: 'Article',
       href: getBlogPermalink(),
+    },
+    {
+      text: 'Category',
+      links: allCategories.map((category) => ({
+        text: category,
+        href: getPermalink(category, 'category'),
+      })),
     },
     {
       text: 'Travel',
