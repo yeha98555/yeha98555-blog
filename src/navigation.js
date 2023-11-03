@@ -1,7 +1,7 @@
 import { getPermalink, getBlogPermalink, getTravelPermalink, getAsset } from './utils/permalinks';
 import { findCategories } from '~/utils/blog';
 
-const allCategories = await findCategories();
+// const allCategories = await findCategories();
 
 export const headerData = {
   links: [
