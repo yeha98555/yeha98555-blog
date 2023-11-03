@@ -9,13 +9,13 @@ export const headerData = {
       text: 'Article',
       href: getBlogPermalink(),
     },
-    {
-      text: 'Category',
-      links: allCategories.map((category) => ({
-        text: category,
-        href: getPermalink(category, 'category'),
-      })),
-    },
+    // {
+    //   text: 'Category',
+    //   links: allCategories.map((category) => ({
+    //     text: category,
+    //     href: getPermalink(category, 'category'),
+    //   })),
+    // },
     {
       text: 'Travel',
       href: getTravelPermalink(),
