@@ -5,7 +5,7 @@
     "days": 10
   },
   {
-    "ISO3": "SA",
+    "ISO3": "USA",
     "Name": "United States",
     "days": 5
   },
@@ -20,7 +20,7 @@
     "days": 8
   },
   {
-    "ISO3": "AD",
+    "ISO3": "AND",
     "Name": "Andorra",
     "days": 1
   },
@@ -66,7 +66,7 @@
   },
   {
     "ISO3": "VAT",
-    "Name": "Holy See",
+    "Name": "Vatican",
     "days": 1
   },
   {
